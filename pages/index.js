@@ -51,9 +51,7 @@ export default function Home({ session, teste }) {
     <div>
       {
         data ? (
-          data.admin ? (
-            <h1>Admin</h1>
-          ) : (
+          data.admin && (
             <div>
               <h1 style={{ textAlign: 'center' }}>Agenda de contatos do usuário: {data.user}</h1>
               <div className={styles.container}>
