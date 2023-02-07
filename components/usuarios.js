@@ -20,7 +20,7 @@ export default function Usuarios({ users }) {
       };
     let teste = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/contato/listForUser/1', config);
+            const response = await axios.get('https://pw2-2023-api-agenda.onrender.com/contato/listForUser/1', config);
 
             console.log(response.data);
 

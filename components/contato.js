@@ -18,7 +18,7 @@ export default function FormContato() {
         data.append('idUsuario', id)
 
         if(id != null){
-            fetch('http://localhost:4000/contato', {
+            fetch('https://pw2-2023-api-agenda.onrender.com/contato', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',

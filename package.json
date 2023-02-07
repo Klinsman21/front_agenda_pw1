@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": " next build; next start"
   },
   "dependencies": {
     "@alsolovyev/local-storage": "^0.2.0",

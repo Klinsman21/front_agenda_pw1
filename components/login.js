@@ -14,7 +14,7 @@ export default function FormLogin() {
         data.append('password', formData.get('password'))
         data.append('email', formData.get('email'))
 
-        fetch('http://localhost:4000/users/login', {
+        fetch('https://pw2-2023-api-agenda.onrender.com/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

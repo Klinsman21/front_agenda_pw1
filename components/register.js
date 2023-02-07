@@ -16,7 +16,7 @@ export default function FormRegister() {
         data.append('email', formData.get('email'))
         data.append('admin', formData.get('admin'))
 
-        fetch('http://localhost:4000/users/register', {
+        fetch('https://pw2-2023-api-agenda.onrender.com/users/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

@@ -14,7 +14,7 @@ export default function Home({ session, teste }) {
       setData(JSON.parse(sessionStorage.getItem('session')));
       if (data != null) {
         console.log(data)
-        fetch(`http://localhost:4000/contato/listForUser/${JSON.parse(sessionStorage.getItem('session')).id}`, {
+        fetch(`https://pw2-2023-api-agenda.onrender.com/listForUser/${JSON.parse(sessionStorage.getItem('session')).id}`, {
           headers: {
             'Auth-Token': JSON.parse(sessionStorage.getItem('session')).token,
           },
@@ -31,7 +31,7 @@ export default function Home({ session, teste }) {
   }, [])
 
   function remove(id) {
-    fetch(`http://localhost:4000/contato/${id}`, {
+    fetch(`https://pw2-2023-api-agenda.onrender.com/contato/${id}`, {
       headers: {
         'Auth-Token': JSON.parse(sessionStorage.getItem('session')).token,
       },
