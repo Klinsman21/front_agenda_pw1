@@ -51,7 +51,6 @@ export default function Home({ session, teste }) {
     <div>
       {
         data ? (
-          data.admin && (
             <div>
               <h1 style={{ textAlign: 'center' }}>Agenda de contatos do usuário: {data.user}</h1>
               <div className={styles.container}>
@@ -77,7 +76,6 @@ export default function Home({ session, teste }) {
                 <button onClick={() => logout()} style={{ marginLeft: '10px', marginTop: '20px' }} type="button" class="btn btn-danger btn-lg">Sair</button>
               </center>
             </div>
-          )
 
         ) : (
           <div>
