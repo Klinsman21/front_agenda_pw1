@@ -12,17 +12,17 @@ export default function Home({ session, teste }) {
   useEffect(() => {
     try {
       setData(JSON.parse(sessionStorage.getItem('session')));
-      if (data != null) {
-        console.log(data)
-        fetch(`https://pw2-2023-api-agenda.onrender.com/listForUser/${JSON.parse(sessionStorage.getItem('session')).id}`, {
+      if (sessionStorage.getItem('session').length > 5) {
+        console.log(JSON.parse(sessionStorage.getItem('session')).token)
+        fetch(`https://pw2-2023-api-agenda.onrender.com/contato/listForUser/${JSON.parse(sessionStorage.getItem('session')).id}`, {
           headers: {
             'Auth-Token': JSON.parse(sessionStorage.getItem('session')).token,
           },
         })
           .then(response => response.json())
           .then(response => {
-            setContatos(response)
             console.log(response)
+            setContatos(response)
           })
       }
     } catch (error) {
